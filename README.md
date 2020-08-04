@@ -14,13 +14,9 @@ yarn install
 
 ## Usage
 
-In development mode, just run it with node:
+By default this service will run on port 3000.
 
-```shell
-node index.js
-```
-
-A restapi service will run on port 3000.
+You can change the port with `PORT` env var.
 
 The only available route is "_/html_converter_" that accept one single parameter: `html`.
 
@@ -33,6 +29,18 @@ The response of this call is a json with converted data:
     }
 }
 ```
+
+### Development mode
+
+In development mode, just run it with node:
+
+```shell
+yarn start
+```
+
+### Production mode
+
+You can use pm2 to manage this process. There is already an ecosystem file.
 
 ## Credits
 
